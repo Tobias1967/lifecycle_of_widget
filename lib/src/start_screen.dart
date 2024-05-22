@@ -33,31 +33,30 @@ class _CounterScreenState extends State<CounterScreen> {
   @override
   void initState() {
     super.initState();
-    print("initState() aufgerufen für _CounterScreenState");
+    print("initState() called for _CounterScreenState");
   }
 
   @override
   void dispose() {
-    ///////////// Hier wird alles wieder gelöscht!
-    print("dispose() aufgerufen für _CounterScreenState");
+    print("dispose() called for _CounterScreenState");
     super.dispose();
   }
 
   void _incrementCounter() {
     setState(() {
-      counter += 20;
-      print("Zähler aktualisiert zu: $counter");
+      counter += 2;
+      print("Counter updated to: $counter");
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    print("build() aufgerufen für _CounterScreenState");
+    print("build() called for _CounterScreenState");
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[100],
         title: const Text(
-          "Zähler App",
+          "Test-Seite",
           style: TextStyle(fontWeight: FontWeight.w900),
         ),
       ),
@@ -66,7 +65,7 @@ class _CounterScreenState extends State<CounterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Der aktuelle Wert ist:',
+              'Hier kommt man hin!',
               style: TextStyle(fontSize: 30),
             ),
             Text(
