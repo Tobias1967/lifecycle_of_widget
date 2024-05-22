@@ -35,28 +35,36 @@ class _CounterScreenState extends State<CounterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Counter App"),
+        backgroundColor: Colors.blue[100],
+        title: const Text(
+          "Zähler App",
+          style: TextStyle(fontWeight: FontWeight.w900),
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'The current value is:',
-              style: TextStyle(fontSize: 20),
+              'Der aktuelle Wert ist:',
+              style: TextStyle(fontSize: 30),
             ),
             Text(
               '$counter',
-              style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 234, 7, 7)),
             ),
             const SizedBox(height: 20),
             OutlinedButton(
               onPressed: _incrementCounter,
               style: OutlinedButton.styleFrom(
-                foregroundColor: Colors.blue,
-                side: const BorderSide(color: Colors.blue, width: 2),
+                foregroundColor: const Color.fromARGB(255, 237, 104, 8),
+                side: const BorderSide(
+                    color: Color.fromARGB(255, 243, 33, 86), width: 2),
               ),
-              child: const Text("Increment by 2"),
+              child: const Text("Erhöhe um 2"),
             ),
           ],
         ),
